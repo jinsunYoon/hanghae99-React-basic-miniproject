@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+@font-face {
+  font-family: 'HSYuji-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* start */
+.start-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	width: 500px;
+	height: 100vh;
+  margin: auto;
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+}
+
+
+.start-wrap .header {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  top: 0;
+  width: 500px;
+  height: 130px;
+  margin: auto;
+  background-color: #fff;
+  z-index: 100000;
+}
+
+.start-wrap .header img {
+	width: 500px;
+  margin: auto;
+}
+
+.start-wrap .body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;width: 80%;
+  height: 100vh;
+	/* overflow-y: scroll; */
+	background-color: #FFC97E;
+	border-radius: 30px;
+	padding: 40px;
+	margin: 30px;
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.start-wrap h1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  /* background-color: #FFC97E; */
+	border: 4px solid #8E97FD;
+	/* color: white; */
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	text-align: center;
+	border-radius: 20px;
+	padding: 60px;
+}
+
+.start-wrap button {
+  width: 160px;
+  height: 50px;
+  margin: auto;
+  border: none;
+  border-radius: 18px;
+  background-color: #FFC97E;
+  border: 4px solid #8E97FD;
+  cursor: pointer;
+  font-family: 'HSYuji-Regular';
+}
+
+.start-wrap button:hover {
+  width: 100%;
+  height: 50px;
+  background-color: #8E97FD;
+  border: 4px solid #FFC97E;
+  color: white;
+  transition: 0.3s;
+}
+
+/* List.js */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+	height: 100%;
+}
+
+#root {
+	height: 100%;
+}
+
+.list-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	width: 500px;
+	height: 100%;
+  margin: auto;
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+}
+
+.list-wrap .header {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  top: 0;
+  width: 500px;
+  height: 130px;
+  margin: auto;
+  background-color: #fff;
+  z-index: 100000;
+}
+
+.list-wrap .header img {
+	width: 500px;
+  margin: auto;
+}
+
+.list-wrap .body {
+	width: 100%;
+  height: 100%;
+	overflow-y: scroll;
+}
+::-webkit-scrollbar{
+	display: none;
+}
+
+.list-wrap .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  min-height: 125px;
+  margin: 25px auto;
+  padding: 5px 10px;
+  background: #8E97FD;
+  border-radius: 20px;
+  color: #FFECCC;
+  cursor: pointer;
+}
+
+.list-wrap .box1 {
+	display: flex;
+	align-items: center;
+	justify-items: center;
+  width: 30%;
+  min-height: 100px;
+	margin: auto;
+  background-color: #FFC97E;
+  border-radius: 30px;
+  color: #3F414E;
+  font-family: 'Nanum Pen Script', cursive;
+	text-align: center;
+}
+
+.list-wrap .box2 {
+  display: flex;
+	flex-direction: column;
+	align-items: left;
+	width: 65%;
+  height: 100px;
+	padding: 10px 0;
+  color: #3F414E;
+  font-family: 'HSYuji-Regular';
+}
+
+.list-wrap .card:hover {
+  width: 85%;
+  min-height: 125px;
+  margin: 25px auto;
+  padding: 5px 10px;
+  background: #FFC97E;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+  color: #3F414E;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.list-wrap .vocab {
+  margin: auto;
+  font-size: 30px;
+	word-break: break-all;
+
+}
+
+.list-wrap .definition {
+  margin: auto 0;
+	font-size: 18px;
+	word-break: break-all;
+}
+
+.list-wrap .example {
+  margin: auto 0;
+  font-size: 18px;
+  color: blue;
+}
+
+.list-wrap .footer {
+  /* position: fixed; */
+  bottom: 0;
+	width: 500px;
+	height: 70px;
+  /* margin-top: 100px; */
+  padding: 8px;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+  text-align: center;
+}
+
+.list-wrap .footer button {
+  width: 160px;
+  height: 50px;
+  margin: auto;
+  border: none;
+  border-radius: 18px;
+  background-color: #FFC97E;
+  border: 4px solid #8E97FD;
+  cursor: pointer;
+  font-family: 'HSYuji-Regular';
+}
+
+.list-wrap .footer button:hover {
+  width: 80%;
+  height: 50px;
+  background-color: #8E97FD;
+  border: 4px solid #FFC97E;
+  color: white;
+  transition: 0.3s;
+}
+
+/* Detail.js */
+
+.detail-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	width: 500px;
+  min-height: 620px;
+  margin: auto;
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+}
+
+.detail-wrap .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+	width: 500px;
+  height: 90px;
+  margin: auto;
+  background-color: #FFC97E;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.detail-wrap .header button {
+  width: 50px;
+  height: 50px;
+  margin-left: -100px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.detail-wrap .header button img {
+  width: 30px;
+  height: 30px;
+  margin-left: -0px;
+}
+
+.detail-wrap .header button img:hover {
+  width: 40px;
+  height: 40px;
+  margin-left: -0px;
+  transition: 0.2s;
+}
+
+.detail-wrap .header .logo {
+  margin-left: 30px;
+  margin-right: -20px;
+  color: white;
+  font-size: 40px;
+  font-family: 'HSYuji-Regular';
+}
+
+.detail-wrap .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.detail-wrap .vocab,
+.detail-wrap .definition,
+.detail-wrap .example {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 400px;
+  height: 110px;
+  margin: 10px;
+  padding: 5px 0;
+  background: #8E97FD;
+  border-radius: 20px;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 30px;
+  color: #3F414E;
+}
+
+.detail-wrap .body .name {
+  width: 80px;
+  height: 80px;
+  margin: auto 20px;
+  padding: 30px 20px;
+  background-color: #FFC97E;
+  border-radius: 50%;
+  color: #3F414E;
+  font-family: 'HSYuji-Regular';
+  font-size: 20px;
+  text-align: center;
+}
+
+.detail-wrap .example {
+  color: blue;
+}
+
+.detail-wrap .footer {
+  position: fixed;
+  bottom: 0;
+	width: 500px;
+  height: 70px;
+  margin-top: 100px;
+  padding: 8px;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+  text-align: center;
+}
+
+.detail-wrap .footer button {
+  width: 55px;
+  height: 55px;
+  margin: auto;
+  border: none;
+  border-radius: 18px;
+  background-color: #8E97FD;
+  cursor: pointer;
+}
+
+.detail-wrap .footer button img {
+  width: 40px;
+  height: 40px;
+}
+
+.detail-wrap .footer button:hover {
+  width: 60px;
+  height: 60px;
+  transition: 0.2s;
+}
+
+/* post */
+
+.post-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	width: 500px;
+  min-height: 620px;
+  margin: auto;
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+}
+
+.post-wrap .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+	width: 500px;
+  height: 90px;
+  margin: auto;
+  background-color: #FFC97E;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.post-wrap .header button {
+  width: 50px;
+  height: 50px;
+  margin-left: -100px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.post-wrap .header button img {
+  width: 30px;
+  height: 30px;
+  margin-left: -0px;
+}
+
+.post-wrap .header button img:hover {
+  width: 40px;
+  height: 40px;
+  margin-left: -0px;
+  transition: 0.2s;
+}
+
+.post-wrap .header .logo {
+  margin-left: 30px;
+  margin-right: -20px;
+  color: white;
+  font-size: 40px;
+  font-family: 'HSYuji-Regular';
+}
+
+.post-wrap .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+
+.post-wrap .vocab,
+.post-wrap .definition,
+.post-wrap .example {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 400px;
+  height: 110px;
+  margin: 10px;
+  padding: 5px 0;
+  background: #8E97FD;
+  border-radius: 20px;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 30px;
+  color: #3F414E;
+}
+
+.post-wrap .vocab:hover,
+.post-wrap .definition:hover,
+.post-wrap .example:hover {
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+  transition: 0.2s;
+}
+
+.post-wrap .body .name {
+  width: 110px;
+  height: 60px;
+  margin: 15px;
+  padding-top: 20px;
+  background-color: #FFC97E;
+  border-radius: 20px;
+  color: #3F414E;
+  font-family: 'HSYuji-Regular';
+  font-size: 18px;
+  text-align: center;
+}
+
+.post-wrap .body input {
+  width: 200px;
+  height: 30px;
+  padding-left: 20px;
+  border-radius: 20px;
+  border: #FFC97E;
+}
+
+.post-wrap .body input:focus {
+  outline: none;
+}
+
+.post-wrap .footer {
+  position: fixed;
+  bottom: 0;
+	width: 500px;
+  height: 70px;
+  margin-top: 100px;
+  padding: 8px;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+  text-align: center;
+}
+
+.post-wrap .footer button {
+  width: 130px;
+  height: 50px;
+  margin: auto;
+  border-radius: 18px;
+  background-color: #FFC97E;
+  border: 4px solid #8E97FD;
+  cursor: pointer;
+  font-family: 'HSYuji-Regular';
+}
+
+.post-wrap .footer button:hover {
+  width: 80%;
+  height: 50px;
+  background-color: #FFC97E;
+  transition: 0.3s;
+}
+
+/* spinner */
+
+.spinner-wrap {
+	background-color: whtie;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.spinner-wrap .img {
+	margin: auto;
+}
+
+
+/* Score */
+
+.score-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	width: 500px;
+	height: 100vh;
+  margin: auto;
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+}
+
+.score-wrap .header {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  top: 0;
+  width: 500px;
+  height: 130px;
+  margin: auto;
+  background-color: #fff;
+  z-index: 100000;
+}
+
+.score-wrap .header img {
+	width: 500px;
+  margin: auto;
+}
+
+.score-wrap .body {
+	width: 100%;
+  height: 100%;
+	overflow-y: scroll;
+}
+::-webkit-scrollbar{
+	display: none;
+}
+
+.score-wrap .body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  min-height: 125px;
+  margin: 25px auto;
+  padding: 5px 10px;
+  background: #8E97FD;
+  border-radius: 20px;
+  color: #FFECCC;
+  cursor: pointer;
+}
+.score-wrap .body p {
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-family: 'Nanum Pen Script', cursive;
+	margin-top: 50px;
+	text-align: center;
+}
+.score-wrap .score {
+	border-bottom: 2px solid #FFC97E;
+	color: black;
+}
+
+.score-wrap .footer {
+  /* position: fixed; */
+  bottom: 0;
+	width: 500px;
+	height: 70px;
+  /* margin-top: 100px; */
+  padding: 8px;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+  text-align: center;
+}
+
+.score-wrap .body button {
+  width: 160px;
+  height: 50px;
+  margin: auto;
+  border: none;
+  border-radius: 18px;
+  background-color: #FFC97E;
+  border: 4px solid #8E97FD;
+  cursor: pointer;
+  font-family: 'HSYuji-Regular';
+}
+
+.score-wrap .body button:hover {
+  width: 80%;
+  height: 50px;
+  background-color: #8E97FD;
+  border: 4px solid #FFC97E;
+  color: white;
+  transition: 0.3s;
+}
+
+/* quiz */
+
+.quiz-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	width: 500px;
+	height: 100vh;
+  margin: auto;
+  box-shadow: 5px 5px 10px 5px #9E9E9E;
+}
+
+.quiz-wrap .header {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  top: 0;
+  width: 500px;
+  height: 130px;
+  margin: auto;
+  background-color: #fff;
+  z-index: 100000;
+}
+
+.quiz-wrap .header img {
+	width: 500px;
+  margin: auto;
+}
+
+.quiz-wrap .body {
+	width: 100%;
+  height: 100%;
+	overflow-y: scroll;
+}
+::-webkit-scrollbar{
+	display: none;
+}
+
+.quiz-wrap .body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  min-height: 125px;
+  margin: 25px auto;
+  padding: 5px 10px;
+  background: #8E97FD;
+  border-radius: 20px;
+  color: black;
+  cursor: pointer;
+	font-size: 30px;
+  font-family: 'Nanum Pen Script', cursive;
+	text-align: center;
+
+
+}
+
+.quiz-wrap .body p {
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+.quiz-wrap .body button {
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  border: none;
+  border-radius: 18px;
+  background-color: #FFC97E;
+  border: 4px solid #8E97FD;
+  cursor: pointer;
+  font-family: 'HSYuji-Regular';
+	font-size: 30px;
+	margin-top: 30px;
+}
+
+.quiz-wrap .body button:hover {
+  width: 100px;
+  height: 50px;
+  background-color: #8E97FD;
+  border: 4px solid #FFC97E;
+  color: white;
+  transition: 0.3s;
+}
